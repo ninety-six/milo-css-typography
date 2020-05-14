@@ -1,0 +1,202 @@
+@import "./variables";
+
+%h {
+    color: var(--header-font-color, $header-font-color);
+    font-family: $header-font-family;
+    small {
+        font-size: 65%;
+        line-height: 1;
+    }
+}
+
+h1,
+.h1 {
+    @extend %h;
+    font-size: $h1-font-size;
+    font-weight: $h1-font-weight;
+    line-height: $h1-line-height;
+    margin: $h1-margin;
+}
+
+h2,
+.h2 {
+    @extend %h;
+    font-size: $h2-font-size;
+    font-weight: $h2-font-weight;
+    line-height: $h2-line-height;
+    margin: $h2-margin;
+}
+
+h3,
+.h3 {
+    @extend %h;
+    font-size: $h3-font-size;
+    font-weight: $h3-font-weight;
+    line-height: $h3-line-height;
+    margin: $h3-margin;
+}
+
+h4,
+.h4 {
+    @extend %h;
+    font-size: $h4-font-size;
+    font-weight: $h4-font-weight;
+    line-height: $h4-line-height;
+    margin: $h4-margin;
+}
+
+h5,
+.h5 {
+    @extend %h;
+    font-size: $h5-font-size;
+    font-weight: $h5-font-weight;
+    line-height: $h5-line-height;
+    margin: $h5-margin;
+}
+
+h6,
+.h6 {
+    @extend %h;
+    font-size: $h6-font-size;
+    font-weight: $h6-font-weight;
+    line-height: $h6-line-height;
+    margin: $h6-margin;
+}
+
+abbr[title] { // stylelint-disable-line selector-no-qualifying-type
+    text-decoration: underline dotted;
+}
+
+p { margin-bottom: $paragraph-margin-bottom; }
+
+b,
+strong { font-weight: $strong-font-weight; }
+
+small { font-size: $small-font-size; }
+
+blockquote {
+    background: $blockquote-background;
+    border-left: $blockquote-border-left-width solid var(--highlight-color, $blockquote-border-left-color);
+    margin-bottom: $blockquote-margin-bottom;
+    padding: $blockquote-padding-y $blockquote-padding-x;
+}
+
+mark {
+    background-color: var(--highlight-color, $mark-bg-color);
+    color: $mark-font-color;
+    padding: 0 $mark-padding-x;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+
+sup { top: -.5em; }
+
+// Links
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+a {
+    background-color: transparent;
+    color: var(--highlight-color, $link-color);
+    text-decoration: $link-decoration;
+    transition: $link-transition;
+    @media (hover: hover) {
+        &:hover {
+            color: $link-color-hover;
+            text-decoration: $link-decoration-hover;
+        }
+    }
+}
+
+// List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+ul {
+    list-style: $ul-list-style;
+    margin-bottom: $ul-list-margin-bottom;
+    padding-left: $ul-list-padding-left;
+    li { margin-bottom: $ul-list-item-spacing; }
+    ul,
+    ol { margin: $ul-list-nested-margin; }
+}
+
+ol {
+    list-style: $ol-list-style;
+    margin-bottom: $ol-list-margin-bottom;
+    padding-left: $ol-list-padding-left;
+    li { margin-bottom: $ul-list-item-spacing; }
+    ul,
+    ol { margin: $ol-list-nested-margin; }
+}
+
+dl {
+    margin-bottom: $dl-margin-bottom;
+    dt {
+        font-weight: 600;
+        margin: $dt-margin;
+    }
+    dd { margin: $dd-margin; }
+}
+
+// Nav
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+nav ul {
+    list-style: none !important; // stylelint-disable-line declaration-no-important
+    margin: 0;
+    padding: 0;
+    text-transform: $nav-text-transform;
+}
+
+.nav-inline ul li {
+    display: inline-block;
+    margin: 0 $nav-inline-elem-margin-x;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+}
+
+// Code
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+code,
+kbd,
+pre,
+samp { font-family: $code-font-family; }
+
+// Inline code
+code {
+    background: $code-background;
+    border: $code-border-width solid $code-border-color;
+    border-radius: $code-border-radius;
+    color: $code-font-color;
+    font-size: $code-font-size;
+    padding: $code-padding;
+    word-break: break-word;
+}
+
+// Code block
+pre {
+    background: $code-background;
+    border: $code-border-width solid $code-border-color;
+    border-radius: $code-border-radius;
+    color: $code-font-color;
+    display: block;
+    font-size: $pre-font-size;
+    margin-bottom: $pre-margin-bottom;
+    overflow-x: auto;
+    padding: $pre-padding;
+    white-space: pre;
+    // Inline code within
+    code {
+        color: inherit;
+        font-size: inherit;
+        word-break: normal;
+    }
+}

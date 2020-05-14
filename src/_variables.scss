@@ -1,0 +1,151 @@
+// Variables
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Base Font
+$base-font-size:                16px !default;
+$base-line-height:              1.75 !default;
+$base-font-weight:              400 !default;
+
+// Font Family
+$base-font-family:              "Open Sans", sans-serif !default;
+$header-font-family:            $base-font-family !default;
+$code-font-family:              monospace, monospace !default;
+
+// The font sizes for h1-h6
+$h1-font-size:                  2    * $base-font-size !default;
+$h2-font-size:                  1.5  * $base-font-size !default;
+$h3-font-size:                  1.17 * $base-font-size !default;
+$h4-font-size:                  1    * $base-font-size !default;
+$h5-font-size:                  .83  * $base-font-size !default;
+$h6-font-size:                  .67  * $base-font-size !default;
+
+$heading-font-weight:           700 !default;
+
+$h1-font-weight:                $heading-font-weight !default;
+$h2-font-weight:                $heading-font-weight !default;
+$h3-font-weight:                $heading-font-weight !default;
+$h4-font-weight:                $heading-font-weight !default;
+$h5-font-weight:                $heading-font-weight !default;
+$h6-font-weight:                $heading-font-weight !default;
+
+$heading-margin:                0 0 1.5rem !default;
+
+$h1-margin:                     $heading-margin !default;
+$h2-margin:                     $heading-margin !default;
+$h3-margin:                     $heading-margin !default;
+$h4-margin:                     $heading-margin !default;
+$h5-margin:                     $heading-margin !default;
+$h6-margin:                     $heading-margin !default;
+
+$h1-line-height:                1.2 !default;
+$h2-line-height:                1.25 !default;
+$h3-line-height:                1.3 !default;
+$h4-line-height:                1.35 !default;
+$h5-line-height:                1.5 !default;
+$h6-line-height:                1.6 !default;
+
+$generic-margin-bottom:         1.5rem !default;  // used as a starting point for other variables applied to elements
+
+// Paragraph
+$paragraph-margin-bottom:       $generic-margin-bottom !default;
+
+$strong-font-weight:            700 !default;
+$small-font-size:               80% !default;
+
+// Colours
+$colors: () !default;
+$colors: map-merge(
+    (
+        // Required base colours
+        "white":                rgb(255, 255, 255),
+        "black":                rgb(17, 17, 17),
+        "primary":              rgb(10, 211, 255),
+        "secondary":            rgb(235, 236, 238),
+        // Greyscale
+        "smoke":                rgb(240, 240, 240),
+        "silver":               rgb(221, 221, 221),
+        "gray":                 rgb(170, 170, 170)
+    ),
+    $colors
+);
+
+// Base Colors
+$font-color:                    rgb(62, 62, 62) !default;
+$header-font-color:             $font-color !default;
+$highlight-color:               map-get($colors, "primary") !default;
+
+// Blockquote
+$blockquote-padding-x:          1.5rem !default;
+$blockquote-padding-y:          1.5rem !default;
+$blockquote-background:         map-get($colors, "smoke") !default;
+$blockquote-border-left-width:  .5rem !default;
+$blockquote-border-left-color:  $highlight-color !default;
+$blockquote-margin-bottom:      $generic-margin-bottom !default;
+
+// Mark
+$mark-bg-color:                 $highlight-color !default;
+$mark-font-color:               $font-color !default;
+$mark-padding-x:                .5rem !default;
+
+// Borders
+$border-width:                  1px !default;
+$border-color:                  map-get($colors, "silver") !default;
+
+// Miscellaneous
+$global-radius:                 .25rem !default;
+$darken-hover-percent:          10% !default;  // used within hovers in links and buttons
+$animation-speed-fast:          400ms !default;
+$easing-default:                cubic-bezier(.25, .46, .45, .94) !default;  // easeOutQuad - Further easing options can be found at https://easings.net/
+
+// Links
+$link-color:                    $highlight-color !default;
+$link-color-hover:              darken($link-color, $darken-hover-percent) !default;
+$link-decoration:               none !default;
+$link-decoration-hover:         none !default;
+$link-transition:               color $animation-speed-fast $easing-default !default;
+
+// Lists
+$ul-list-padding-left:          2.5rem !default;
+$ul-list-style:                 circle outside !default;
+$ul-list-item-spacing:          .5rem !default;
+$ul-list-margin-bottom:         $generic-margin-bottom !default;
+$ul-list-nested-margin:         $ul-list-item-spacing 0 0 2.5rem !default;
+
+$ol-list-padding-left:          2.5rem !default;
+$ol-list-style:                 decimal outside !default;
+$ol-list-item-spacing:          .5rem !default;
+$ol-list-margin-bottom:         $generic-margin-bottom !default;
+$ol-list-nested-margin:         $ol-list-item-spacing 0 0 2.5rem !default;
+
+$dl-margin-bottom:              $generic-margin-bottom !default;
+$dt-margin:                     0 0 0 0 !default;
+$dd-margin:                     0 0 $generic-margin-bottom 2rem !default;
+
+$list-inline-elem-margin-x:     1rem !default;
+
+// Nav
+$nav-text-transform:            uppercase !default;
+$nav-inline-elem-margin-x:      $list-inline-elem-margin-x !default;
+
+// Code
+$code-border-width:             $border-width !default;
+$code-border-color:             $border-color !default;
+$code-border-radius:            $global-radius !default;
+$code-background:               map-get($colors, "smoke") !default;
+$code-font-color:               $font-color !default;
+$code-font-size:                100% !default;
+$code-padding:                  .2rem .5rem !default;
+
+
+// Preformatted block
+$pre-font-size:                 90% !default;
+$pre-padding:                   1rem 1.5rem !default;
+$pre-margin-bottom:             $generic-margin-bottom !default;
+
+// CSS Variables/Custom Properties
+:root {
+    --base-font-size: #{$base-font-size};
+    --font-color: #{$font-color};
+    --header-font-color: #{$header-font-color};
+    --highlight-color: #{$highlight-color};
+}
