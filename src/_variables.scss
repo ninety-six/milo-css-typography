@@ -57,14 +57,10 @@ $colors: () !default;
 $colors: map-merge(
     (
         // Required base colours
-        "white":                rgb(255, 255, 255),
-        "black":                rgb(17, 17, 17),
         "primary":              rgb(10, 211, 255),
-        "secondary":            rgb(235, 236, 238),
         // Greyscale
         "smoke":                rgb(240, 240, 240),
-        "silver":               rgb(221, 221, 221),
-        "gray":                 rgb(170, 170, 170)
+        "silver":               rgb(221, 221, 221)
     ),
     $colors
 );
@@ -141,11 +137,3 @@ $code-padding:                  .2rem .5rem !default;
 $pre-font-size:                 90% !default;
 $pre-padding:                   1rem 1.5rem !default;
 $pre-margin-bottom:             $generic-margin-bottom !default;
-
-// CSS Variables/Custom Properties
-:root {
-    --base-font-size: #{$base-font-size};
-    --font-color: #{$font-color};
-    --header-font-color: #{$header-font-color};
-    --highlight-color: #{$highlight-color};
-}
